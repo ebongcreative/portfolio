@@ -22,7 +22,7 @@ export function Hero({
   return (
     <ContainerStyled id="page_hero">
       <FigureStyled aria-label="Ebong, Utibe hero image">
-        <MotionSensitiveImage src={'/me.png'} alt="Ebong, Utibe" />
+        <MotionSensitiveImage src={MePng} alt="Ebong, Utibe" />
       </FigureStyled>
 
       <ContentStyled>
