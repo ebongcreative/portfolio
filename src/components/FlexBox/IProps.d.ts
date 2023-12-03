@@ -13,5 +13,7 @@ export interface IProps
       | 'alignContent'
       | 'alignItems'
       | 'alignSelf'
+      | 'width'
+      | 'height'
     >,
     PropsWithChildren {}

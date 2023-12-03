@@ -20,6 +20,27 @@ export const ContainerStyled = styled.section<{bordered?: boolean}>(
 `
 )
 
+export const BoxedStyled = styled.section`
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  max-width: 500px;
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    max-width: 1024px;
+  }
+  overflow-y: auto;
+`
+
 export const FloatingButtonStyled = styled.div`
   transition: var(--fade-in);
   box-shadow: var(--beam-shadow);

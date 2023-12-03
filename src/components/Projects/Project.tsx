@@ -1,12 +1,12 @@
 import projects, { IProject } from '@/.data/projects'
+import { PAGES } from '@/types/pages'
+import * as _ from 'lodash'
 import { useEffect, useRef, useState } from 'react'
 import { RiExternalLinkLine } from 'react-icons/ri'
-// import { resolveAsset } from '../../helper'
-import { PAGES } from '@/types/pages'
 import BottomNavigation from '../BottomNavigation/bottom_navigation'
+import { BoxedStyled, ContainerStyled } from '../common/styled'
 import './style.scss'
 import { StyledCard } from './styled'
-import { ContainerStyled } from '../common/styled'
 
 function ProjectCard(props: { data: IProject }): JSX.Element {
   const [image, setImage] = useState<string>()
@@ -24,7 +24,9 @@ function ProjectCard(props: { data: IProject }): JSX.Element {
   return (
     <StyledCard
       className={[
-        `card  min-w-[300px] max-w-[100%] lg:max-w-[${100/3}px] flex-grow project`,
+        `card  min-w-[300px] max-w-[100%] lg:max-w-[${
+          100 / 3
+        }px] flex-grow project`,
       ].join(' ')}
     >
       <div className="flex-grow flex flex-col h-full">
@@ -85,7 +87,6 @@ function ProjectCard(props: { data: IProject }): JSX.Element {
   )
 }
 
-
 export function Projects() {
   const isMounted = useRef<boolean>(true)
 
@@ -101,7 +102,7 @@ export function Projects() {
     <ContainerStyled>
       <h3 className="section-heading">Projects</h3>
 
-      <div className="boxed_layout">
+      <BoxedStyled>
         <ul className="flex flex-wrap py-[30px] gap-[20px] ">
           {projects?.map((data, idx: number) => {
             return (
@@ -111,14 +112,14 @@ export function Projects() {
             )
           })}
         </ul>
-      </div>
+      </BoxedStyled>
 
       <div className="absolute bottom-0 w-full left-0">
         <BottomNavigation
           leftSlot={{ content: 'Certifications', to: PAGES.CERT }}
           rightSlot={{
-            content: 'Blog',
-            to: PAGES.BLOG,
+            content: _.capitalize(PAGES.GALLERY),
+            to: PAGES.GALLERY,
           }}
         />
       </div>

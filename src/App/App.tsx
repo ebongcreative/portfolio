@@ -1,17 +1,17 @@
-import AboutMe from '@/components/AboutMe/AboutMe'
-import Blog from '@/components/Blog/Blog'
+import AboutMe from '@/components/AboutMe'
 import Certifications from '@/components/Certifications'
-import ContactMe from '@/components/ContactMe/contact'
+import ContactMe from '@/components/ContactMe'
 import FlexBox from '@/components/FlexBox'
-import Hero from '@/components/Hero/hero'
+import Gallery from '@/components/Gallery'
+import Hero from '@/components/Hero'
 import Menu from '@/components/Menu/menu'
-import Projects from '@/components/Projects/project'
+import Projects from '@/components/Projects'
 import ScrollButton from '@/components/ScrollButton'
 import Skills from '@/components/Skills/skills'
 import Tab from '@/components/Tab'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import TypeWriter from '@/components/TypeWriter/type_writer'
-import WorkExperience from '@/components/WorkExperience/work_experience'
+import WorkExperience from '@/components/WorkExperience'
 import { ListItemStyled } from '@/components/common/styled'
 import { CONTACT_LINKS } from '@/constant/contact'
 import usePage from '@/hook/usePage'
@@ -54,20 +54,20 @@ const tab: {
     content: WorkExperience,
   },
   [PAGES.SKILL]: {
-    title: <p>Skills</p>,
+    title: <p>{PAGES.SKILL}</p>,
     content: Skills,
   },
   [PAGES.CERT]: {
-    title: <p>Certifications</p>,
+    title: <p>{PAGES.CERT}</p>,
     content: Certifications,
   },
   [PAGES.PROJECT]: {
-    title: <p>Projects</p>,
+    title: <p>{PAGES.PROJECT}</p>,
     content: Projects,
   },
-  [PAGES.BLOG]: {
-    title: <p>Blog</p>,
-    content: Blog,
+  [PAGES.GALLERY]: {
+    title: <p>{PAGES.GALLERY}</p>,
+    content: Gallery,
   },
   [PAGES.CONTACT]: {
     title: <p>Contact</p>,
@@ -81,7 +81,7 @@ function App() {
   const { activePage, onPageChange } = usePage()
   const scrollRef = createRef<HTMLDivElement>()
   const currentPageRef = React.useRef<PAGES>()
-  const menu_container_ref = React.createRef<HTMLDivElement>()
+  const menuContainerRef = React.createRef<HTMLDivElement>()
 
   useEffect(() => {
     const body = document?.body
@@ -151,13 +151,13 @@ function App() {
   return (
     <>
       <ContainerStyled role="presentation">
-        <TopLeftMenuStyled ref={menu_container_ref}>
+        <TopLeftMenuStyled ref={menuContainerRef}>
           <FlexBox flexDirection="column" gap={10} alignItems="center">
             <ThemeSwitcher onChange={theme.onToggle} mode={theme?.mode} />
 
             <MenuStyled
               placement={{ initial: 6, area: menu_placement }}
-              container={menu_container_ref}
+              container={menuContainerRef}
             >
               <div role="presentation">
                 {Object.entries(tab).map(([id, { title }]) => (
@@ -193,7 +193,11 @@ function App() {
                     speed={1000}
                     loop
                     text={[
-                      [`Industrial_Designer`, `2D_Artist/Modeler`, `Civil_Engineer`],
+                      [
+                        `Industrial_Designer`,
+                        `2D_Artist/Modeler`,
+                        `Civil_Engineer`,
+                      ],
                       [
                         'Maya',
                         '3Ds_Max',
@@ -229,6 +233,7 @@ function App() {
                 >
                   Work Experience
                 </NavLink>
+
                 <NavLink
                   href={`#${PAGES.PROJECT}`}
                   className={cn('nav-link', 'px-4 flex-grow-0 text-center')}
@@ -236,6 +241,14 @@ function App() {
                   onClick={() => onPageChange(PAGES.PROJECT)}
                 >
                   Projects
+                </NavLink>
+
+                <NavLink
+                  href={`#${PAGES.GALLERY}`}
+                  className={cn('nav-link', 'px-4 flex-grow-0 text-center')}
+                  onClick={() => onPageChange(PAGES.GALLERY)}
+                >
+                  Gallery
                 </NavLink>
               </div>
             </div>

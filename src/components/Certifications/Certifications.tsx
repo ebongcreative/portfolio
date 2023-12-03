@@ -1,15 +1,15 @@
-import { RiExternalLinkLine } from 'react-icons/ri'
 import certifications from '@/.data/certifications'
 import { PAGES } from '@/types/pages'
+import { RiExternalLinkLine } from 'react-icons/ri'
 import BottomNavigation from '../BottomNavigation/bottom_navigation'
+import { BoxedStyled, ContainerStyled } from '../common/styled'
 import './style.scss'
-import { ContainerStyled } from '../common/styled'
 
 export function Certifications() {
   return (
     <ContainerStyled>
       <h3 className="section-heading">Certification</h3>
-      <div className="boxed_layout">
+      <BoxedStyled>
         <ul className="lg:columns-2 gap-[20px] py-[30px] flex-grow ">
           {certifications?.map(({ name, timeline, link }, idx) => (
             <li key={idx} className={`card mb-[20px]`}>
@@ -33,7 +33,7 @@ export function Certifications() {
             </li>
           ))}
         </ul>
-      </div>
+      </BoxedStyled>
 
       <div className="absolute w-full left-0 bottom-0">
         <BottomNavigation

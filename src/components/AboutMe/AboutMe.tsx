@@ -2,7 +2,7 @@ import usePage from '@/hook/usePage'
 import { LINKS } from '@/types/links'
 import { PAGES } from '@/types/pages'
 import BottomNavigation from '../BottomNavigation/bottom_navigation'
-import { ContainerStyled } from '../common/styled'
+import { BoxedStyled, ContainerStyled } from '../common/styled'
 
 export function AboutMe() {
   const setPage = usePage().onPageChange
@@ -11,7 +11,7 @@ export function AboutMe() {
     <>
       <ContainerStyled>
         <h3 className="section-heading">About Me</h3>
-        <section className="boxed_layout">
+        <BoxedStyled>
           {/* ABOUT */}
           <section className="flex-grow flex flex-col py-[30px]  justify-center">
             <div className="">
@@ -62,7 +62,7 @@ export function AboutMe() {
               </button>
             </div>
           </section>
-        </section>
+        </BoxedStyled>
       </ContainerStyled>
       <div className="absolute bottom-0 w-full text-center left-0">
         <BottomNavigation

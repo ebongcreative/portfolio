@@ -53,6 +53,7 @@
   cursor: pointer;
   margin-bottom: 8px;
   transition: var(--fade-in);
+  text-transform: capitalize;
   &:hover {
     @media screen and (min-width: 500px) {
       background: var(--bg-accent);
