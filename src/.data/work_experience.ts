@@ -6,7 +6,7 @@ export default {
       location: 'Hybrid, Dubai',
       timeline: 'June 2023',
       description: ``,
-      // image_url: 'celus_logo.png',
+      image_url: 'celus_logo.png',
     },
     {
       org: 'Blueberry Studios',
@@ -14,7 +14,7 @@ export default {
       location: 'Remote, Shanghai China',
       timeline: 'February 2023',
       description: `Game development`,
-      // image_url: 'lopeer_logo.webp',
+      image_url: 'lopeer_logo.webp',
     },
   ],
   2022: [
@@ -24,7 +24,7 @@ export default {
       location: 'Hybrid, Shenzhen China',
       timeline: 'June 2022',
       description: ``,
-      // image_url: 'celus_logo.png',
+      image_url: 'celus_logo.png',
     },
   ],
   2021: [
@@ -35,7 +35,7 @@ export default {
       timeline: 'August 2021',
       description: `We are into Brand thinking and Amazon product listing
 strategy.`,
-      // image_url: 'roothub_logo.png',
+      image_url: 'roothub_logo.png',
     },
   ],
 
