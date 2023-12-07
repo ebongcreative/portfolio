@@ -9,6 +9,22 @@ export default {
       image_url: 'celus_logo.png',
     },
     {
+      org: 'Band Masters',
+      roles: ['Lead Team Manager', 'Product Designer'],
+      location: 'Hybrid, Dubai',
+      timeline: 'June 2023',
+      description: ``,
+      image_url: 'celus_logo.png',
+    },
+    {
+      org: 'Band Masters',
+      roles: ['Lead Team Manager', 'Product Designer'],
+      location: 'Hybrid, Dubai',
+      timeline: 'June 2023',
+      description: ``,
+      image_url: 'celus_logo.png',
+    },
+    {
       org: 'Blueberry Studios',
       roles: ['Lead 3D character modeler'],
       location: 'Remote, Shanghai China',
@@ -28,6 +44,42 @@ export default {
     },
   ],
   2021: [
+    {
+      org: 'Signalytics Advertising Agency',
+      roles: ['3D Artist'],
+      location: 'Remote, United States of America(USA)',
+      timeline: 'August 2021',
+      description: `We are into Brand thinking and Amazon product listing
+strategy.`,
+      image_url: 'roothub_logo.png',
+    },
+    {
+      org: 'Signalytics Advertising Agency',
+      roles: ['3D Artist'],
+      location: 'Remote, United States of America(USA)',
+      timeline: 'August 2021',
+      description: `We are into Brand thinking and Amazon product listing
+strategy.`,
+      image_url: 'roothub_logo.png',
+    },
+    {
+      org: 'Signalytics Advertising Agency',
+      roles: ['3D Artist'],
+      location: 'Remote, United States of America(USA)',
+      timeline: 'August 2021',
+      description: `We are into Brand thinking and Amazon product listing
+strategy.`,
+      image_url: 'roothub_logo.png',
+    },
+    {
+      org: 'Signalytics Advertising Agency',
+      roles: ['3D Artist'],
+      location: 'Remote, United States of America(USA)',
+      timeline: 'August 2021',
+      description: `We are into Brand thinking and Amazon product listing
+strategy.`,
+      image_url: 'roothub_logo.png',
+    },
     {
       org: 'Signalytics Advertising Agency',
       roles: ['3D Artist'],

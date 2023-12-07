@@ -109,9 +109,9 @@ export const ListStyled = styled.ul`
   }
   `
   export const BottomNavStyled = styled.nav`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  left: 0;
-  
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 0px 30px -15px var(--primary-accent);
   `

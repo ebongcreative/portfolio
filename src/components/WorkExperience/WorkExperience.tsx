@@ -5,7 +5,12 @@ import { AiOutlineCalendar } from 'react-icons/ai'
 import BottomNavigation from '../BottomNavigation/bottom_navigation'
 import type { TSingleWorkExperience } from './IProps'
 import './style.scss'
-import { StickyTimelineStyled, StyledPictureHolder, StyledTimelineCard } from './styled'
+import {
+  StickyTimelineStyled,
+  StyledPictureHolder,
+  StyledTimelineCard,
+  WatermarkedTitleStyled,
+} from './styled'
 import {
   BottomNavStyled,
   BoxedStyled,
@@ -27,7 +32,7 @@ export default function WorkExperience() {
               <div key={`year_${year}_${yidx}`}>
                 <StickyTimelineStyled>
                   <FlexBox justifyContent="flex-end">
-                    <h3 className="watermark__text">{year}</h3>
+                    <WatermarkedTitleStyled>{year}</WatermarkedTitleStyled>
                   </FlexBox>
                 </StickyTimelineStyled>
                 {experiences.map((data, idx) => (

@@ -27,10 +27,24 @@ export const StyledPictureHolder = styled.figure`
   }
 `
 
+export const WatermarkedTitleStyled = styled.div`
+  font-weight: 300;
+  transition: var(--fade-in);
+  font-family: var(--code-font);
+  opacity: 0.1;
+  user-select: none;
+  z-index: 0;
+  font-size: 70px;
+
+  @media screen and (min-width: ${SCREEN.md}) {
+    font-size: 100px;
+  }
+`
+
 export const StickyTimelineStyled = styled.div`
   position: sticky;
-  top: 50px;
-  margin-bottom: 70px;
+  top: 0px;
+  margin-top: -70px;
 `
 
 export const StyledTimelineCard = styled.div`
@@ -122,10 +136,11 @@ export const StyledTimelineCard = styled.div`
     font-size: 20px;
     line-height: 26px;
     opacity: var(--opacity);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 20px;
     max-width: 85%;
     user-select: none;
+    letter-spacing: 0.005rem;
   }
   /* &:hover ${StyledPictureHolder} {
     border-color: var(--primary);

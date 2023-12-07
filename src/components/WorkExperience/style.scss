@@ -15,17 +15,4 @@
   &::-webkit-scrollbar {
     display: none;
   }
-  .watermark__text {
-    font-weight: 300;
-    font-size: 70px;
-    transition: var(--fade-in);
-    font-family: var(--code-font);
-    opacity: 0.1;
-    user-select: none;
-    // margin-left: -20px;
-    z-index: 0;
-  }
-  .timeline__card {
-    
-  }
 }
