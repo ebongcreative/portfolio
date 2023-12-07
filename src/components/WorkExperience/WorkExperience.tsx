@@ -26,7 +26,7 @@ export default function WorkExperience() {
             return (
               <div key={`year_${year}_${yidx}`}>
                 <StickyTimelineStyled>
-                  <FlexBox justifyContent="flex-start">
+                  <FlexBox justifyContent="flex-end">
                     <h3 className="watermark__text">{year}</h3>
                   </FlexBox>
                 </StickyTimelineStyled>

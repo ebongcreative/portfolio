@@ -44,8 +44,8 @@ export const StyledTimelineCard = styled.div`
   transition: var(--fade-in);
   border-radius: 8px;
   box-sizing: border-box;
-  box-shadow: -10px 10px 4px -10px var(--bg-accent),
-    -10px 20px 30px -10px var(--bg-accent);
+  /* box-shadow: -10px 10px 4px -10px var(--bg-accent),
+    -10px 20px 30px -10px var(--bg-accent); */
   @media screen and (min-width: ${SCREEN.md}) {
     padding: 75px 25px 25px;
   }
@@ -97,7 +97,7 @@ export const StyledTimelineCard = styled.div`
     opacity: 0.5;
   }
 
-  &:hover {
+  /* &:hover {
     // transform: translate(0);
     &:after {
       animation-name: headShake;
@@ -115,7 +115,7 @@ export const StyledTimelineCard = styled.div`
       }
       background-color: var(--primary);
     }
-  }
+  } */
 
   .work__org {
     font-style: normal;
@@ -127,8 +127,8 @@ export const StyledTimelineCard = styled.div`
     max-width: 85%;
     user-select: none;
   }
-  &:hover ${StyledPictureHolder} {
+  /* &:hover ${StyledPictureHolder} {
     border-color: var(--primary);
-    /* background: #fff; */
-  }
+    /* background: #fff; 
+  } */
 `
