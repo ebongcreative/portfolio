@@ -31,19 +31,16 @@ export const FigureStyled = styled.figure`
   height: 100%;
   margin-top: -30%;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${SCREEN.md}) {
     margin-top: -10%;
   }
   img {
-    max-width: 70%;
-    @media screen and (min-width: 500px) {
-      max-width: 40%;
-    }
-    @media screen and (min-width: 800px) {
+    max-width: 95%;
+    @media screen and (min-width: ${SCREEN.md}) {
       max-width: 70%;
     }
 
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: ${SCREEN.lg}) {
       max-width: 50%;
     }
   }

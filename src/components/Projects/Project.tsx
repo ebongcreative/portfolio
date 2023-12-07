@@ -4,7 +4,12 @@ import * as _ from 'lodash'
 import { useEffect, useRef, useState } from 'react'
 import { RiExternalLinkLine } from 'react-icons/ri'
 import BottomNavigation from '../BottomNavigation/bottom_navigation'
-import { BoxedStyled, ContainerStyled } from '../common/styled'
+import {
+  BottomNavStyled,
+  BoxedStyled,
+  ContainerStyled,
+  SectionTitleStyled,
+} from '../common/styled'
 import './style.scss'
 import { StyledCard } from './styled'
 
@@ -100,7 +105,7 @@ export function Projects() {
 
   return (
     <ContainerStyled>
-      <h3 className="section-heading">Projects</h3>
+      <SectionTitleStyled>Projects</SectionTitleStyled>
 
       <BoxedStyled>
         <ul className="flex flex-wrap py-[30px] gap-[20px] ">
@@ -114,7 +119,7 @@ export function Projects() {
         </ul>
       </BoxedStyled>
 
-      <div className="absolute bottom-0 w-full left-0">
+      <BottomNavStyled>
         <BottomNavigation
           leftSlot={{ content: 'Certifications', to: PAGES.CERT }}
           rightSlot={{
@@ -122,7 +127,7 @@ export function Projects() {
             to: PAGES.GALLERY,
           }}
         />
-      </div>
+      </BottomNavStyled>
     </ContainerStyled>
   )
 }

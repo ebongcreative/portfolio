@@ -1,3 +1,4 @@
+import { SCREEN } from '@/constant/style.const'
 import styled from 'styled-components'
 
 export const TitleStyled = styled.h2`
@@ -10,6 +11,10 @@ export const SubtitleStyled = styled.h3`
 `
 
 export const FigureStyled = styled.figure`
-  width: 300px;
+  width: 100%;
+  max-width: 50%;
+  @media screen and (min-width: ${SCREEN.md}){
+    width: 25%;
+  }
   margin: 16px;
 `

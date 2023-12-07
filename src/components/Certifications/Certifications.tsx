@@ -2,13 +2,13 @@ import certifications from '@/.data/certifications'
 import { PAGES } from '@/types/pages'
 import { RiExternalLinkLine } from 'react-icons/ri'
 import BottomNavigation from '../BottomNavigation/bottom_navigation'
-import { BoxedStyled, ContainerStyled } from '../common/styled'
+import { BottomNavStyled, BoxedStyled, ContainerStyled, SectionTitleStyled } from '../common/styled'
 import './style.scss'
 
 export function Certifications() {
   return (
     <ContainerStyled>
-      <h3 className="section-heading">Certification</h3>
+      <SectionTitleStyled>Certification</SectionTitleStyled>
       <BoxedStyled>
         <ul className="lg:columns-2 gap-[20px] py-[30px] flex-grow ">
           {certifications?.map(({ name, timeline, link }, idx) => (
@@ -35,7 +35,7 @@ export function Certifications() {
         </ul>
       </BoxedStyled>
 
-      <div className="absolute w-full left-0 bottom-0">
+      <BottomNavStyled>
         <BottomNavigation
           leftSlot={{ content: 'Skills', to: PAGES.SKILL }}
           rightSlot={{
@@ -43,7 +43,7 @@ export function Certifications() {
             to: PAGES.PROJECT,
           }}
         />
-      </div>
+      </BottomNavStyled>
     </ContainerStyled>
   )
 }

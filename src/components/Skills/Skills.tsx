@@ -2,7 +2,13 @@ import styles from './style.module.scss'
 import skills from '@/.data/skills'
 import { PAGES } from '@/types/pages'
 import BottomNavigation from '../BottomNavigation/bottom_navigation'
-import { ContainerStyled } from '../common/styled'
+import {
+  BottomNavStyled,
+  BoxedStyled,
+  ContainerStyled,
+  SectionTitleStyled,
+} from '../common/styled'
+import FlexBox from '../FlexBox'
 
 interface TechnicalSkillInterface {
   name: string
@@ -19,9 +25,9 @@ interface SkillDataToolInterface {
 export default function Skills() {
   return (
     <ContainerStyled>
-      <h3 className="section-heading">Skills</h3>
-      <section className="boxed_layout">
-        <div className="flex py-[30px] flex-col gap-[30px]">
+      <SectionTitleStyled>Skills</SectionTitleStyled>
+      <BoxedStyled>
+        <FlexBox flexDirection="column" gap={30}>
           {Object.entries(skills)?.map(
             ([key, value]: [key: string, value?: Array<any>], indx) => (
               <ul key={indx} className="flex flex-col gap-[15px] ">
@@ -146,9 +152,9 @@ export default function Skills() {
               </ul>
             )
           )}
-        </div>
-      </section>
-      <div className="absolute bottom-0 w-full left-0">
+        </FlexBox>
+      </BoxedStyled>
+      <BottomNavStyled>
         <BottomNavigation
           leftSlot={{ content: 'Work Experience', to: PAGES.WORK_EXP }}
           rightSlot={{
@@ -156,7 +162,7 @@ export default function Skills() {
             to: PAGES.CERT,
           }}
         />
-      </div>
+      </BottomNavStyled>
     </ContainerStyled>
   )
 }

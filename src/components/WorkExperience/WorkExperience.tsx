@@ -5,22 +5,31 @@ import { AiOutlineCalendar } from 'react-icons/ai'
 import BottomNavigation from '../BottomNavigation/bottom_navigation'
 import type { TSingleWorkExperience } from './IProps'
 import './style.scss'
-import { StyledPictureHolder, StyledTimelineCard } from './styled'
-import { ContainerStyled } from '../common/styled'
+import { StickyTimelineStyled, StyledPictureHolder, StyledTimelineCard } from './styled'
+import {
+  BottomNavStyled,
+  BoxedStyled,
+  ContainerStyled,
+  SectionTitleStyled,
+} from '../common/styled'
+import FlexBox from '../FlexBox/FlexBox'
 
 export default function WorkExperience() {
   const list = Object.entries(work_experience).reverse()
 
   return (
     <ContainerStyled>
-      <h3 className="section-heading">Work Experience</h3>
-      <header className=""></header>
-      <section className="boxed_layout py-[30px]" id={PAGES.WORK_EXP}>
+      <SectionTitleStyled>Work Experience</SectionTitleStyled>
+      <BoxedStyled paddingTop={0} id={PAGES.WORK_EXP}>
         <div className="timeline-listing">
           {list.map(([year, experiences], yidx) => {
             return (
               <div key={`year_${year}_${yidx}`}>
-                <h3 className="sticky top-0 watermark__text">{year}</h3>
+                <StickyTimelineStyled>
+                  <FlexBox justifyContent="flex-start">
+                    <h3 className="watermark__text">{year}</h3>
+                  </FlexBox>
+                </StickyTimelineStyled>
                 {experiences.map((data, idx) => (
                   <WorkExperienceCard key={idx} data={data} />
                 ))}
@@ -28,8 +37,8 @@ export default function WorkExperience() {
             )
           })}
         </div>
-      </section>
-      <div className="absolute bottom-0 w-full left-0  z-[100]">
+      </BoxedStyled>
+      <BottomNavStyled>
         <BottomNavigation
           leftSlot={{ content: 'About', to: PAGES.ABOUT }}
           rightSlot={{
@@ -37,7 +46,7 @@ export default function WorkExperience() {
             to: PAGES.SKILL,
           }}
         />
-      </div>
+      </BottomNavStyled>
     </ContainerStyled>
   )
 }
@@ -57,9 +66,9 @@ function WorkExperienceCard(props: TSingleWorkExperience) {
 
   return (
     <>
-      <StyledTimelineCard className="timeline__card">
+      <StyledTimelineCard>
         <div>
-          <ul className="dot-list opacity-70">
+          <ul className="dot-list ">
             <li className="list-item flex-row inline-flex" title={timeline}>
               <AiOutlineCalendar role="presentation" /> {timeline}
             </li>
