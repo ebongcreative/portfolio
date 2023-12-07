@@ -443,8 +443,8 @@ strategy.`,image_url:"roothub_logo.png"}]};const F_=Re.figure`
   transition: var(--fade-in);
   border-radius: 8px;
   box-sizing: border-box;
-  box-shadow: -10px 10px 4px -10px var(--bg-accent),
-    -10px 20px 30px -10px var(--bg-accent);
+  /* box-shadow: -10px 10px 4px -10px var(--bg-accent),
+    -10px 20px 30px -10px var(--bg-accent); */
   @media screen and (min-width: ${yr.md}) {
     padding: 75px 25px 25px;
   }
@@ -496,7 +496,7 @@ strategy.`,image_url:"roothub_logo.png"}]};const F_=Re.figure`
     opacity: 0.5;
   }
 
-  &:hover {
+  /* &:hover {
     // transform: translate(0);
     &:after {
       animation-name: headShake;
@@ -514,7 +514,7 @@ strategy.`,image_url:"roothub_logo.png"}]};const F_=Re.figure`
       }
       background-color: var(--primary);
     }
-  }
+  } */
 
   .work__org {
     font-style: normal;
@@ -526,11 +526,11 @@ strategy.`,image_url:"roothub_logo.png"}]};const F_=Re.figure`
     max-width: 85%;
     user-select: none;
   }
-  &:hover ${F_} {
+  /* &:hover ${F_} {
     border-color: var(--primary);
-    /* background: #fff; */
-  }
-`;function KA(){const e=Object.entries(QA).reverse();return S.jsxs(io,{children:[S.jsx(lo,{children:"Work Experience"}),S.jsx(oo,{paddingTop:0,id:Pe.WORK_EXP,children:S.jsx("div",{className:"timeline-listing",children:e.map(([t,n],r)=>S.jsxs("div",{children:[S.jsx(GA,{children:S.jsx(Ji,{justifyContent:"flex-start",children:S.jsx("h3",{className:"watermark__text",children:t})})}),n.map((l,a)=>S.jsx(XA,{data:l},a))]},`year_${t}_${r}`))})}),S.jsx(pl,{children:S.jsx(ro,{leftSlot:{content:"About",to:Pe.ABOUT},rightSlot:{content:"Skills",to:Pe.SKILL}})})]})}function XA(e){const[t,n]=H.useState(),{image_url:r,org:l,roles:a,timeline:s,location:c,description:d}=e==null?void 0:e.data;return H.useEffect(()=>{r&&(async()=>{const p=new URL(r,window.location.href).href;n(p)})()},[r]),S.jsx(S.Fragment,{children:S.jsxs(YA,{children:[S.jsx("div",{children:S.jsx("ul",{className:"dot-list ",children:S.jsxs("li",{className:"list-item flex-row inline-flex",title:s,children:[S.jsx(KO,{role:"presentation"})," ",s]})})}),S.jsx("p",{className:"work__org mb-1",children:l}),S.jsx("ul",{className:"flex dot-list meta gap-[4px] flex-wrap items-center",children:a==null?void 0:a.map((p,y)=>S.jsx("li",{className:"text-sm list-item",title:p,children:S.jsx("small",{children:p})},y))}),S.jsx("p",{className:"description text-normal text-xs my-2",children:d}),t?S.jsx(F_,{children:S.jsx("picture",{children:S.jsx("img",{alt:`${l} logo`,src:t})})}):null]})})}const B_=z.createContext({mode:"system",onChange(){},onToggle(){}});function qA(e){const[t,n]=z.useState({mode:"system"}),r=s=>{document.body.setAttribute("data-theme",s),n(c=>({...c,mode:s}))};function l(s){if(!s){const d=localStorage.getItem("theme")==="light"?"dark":"light";localStorage.setItem("theme",d),r(d);return}r(s)}function a(){let s=localStorage.getItem("theme")||t.mode;s=s==="light"?"dark":"light",localStorage.setItem("theme",s),r(s)}return z.useEffect(()=>{const s=localStorage.getItem("theme");if(s)r(s);else if(window&&window.matchMedia("(prefers-color-scheme)").media!=="not all"){const c=window.matchMedia("(prefers-color-scheme: dark)");let d=c.matches,p=d?"dark":"light";t||(r(p),localStorage.setItem("theme",p)),c.addEventListener("change",y=>{d=y.matches,p=d?"dark":"light",r(p),localStorage.setItem("theme",p)})}},[]),S.jsx(B_.Provider,{value:{mode:t.mode,onChange:l,onToggle:a},children:e==null?void 0:e.children})}function ZA(){return z.useContext(B_)}const JA=Re.button(()=>`
+    /* background: #fff; 
+  } */
+`;function KA(){const e=Object.entries(QA).reverse();return S.jsxs(io,{children:[S.jsx(lo,{children:"Work Experience"}),S.jsx(oo,{paddingTop:0,id:Pe.WORK_EXP,children:S.jsx("div",{className:"timeline-listing",children:e.map(([t,n],r)=>S.jsxs("div",{children:[S.jsx(GA,{children:S.jsx(Ji,{justifyContent:"flex-end",children:S.jsx("h3",{className:"watermark__text",children:t})})}),n.map((l,a)=>S.jsx(XA,{data:l},a))]},`year_${t}_${r}`))})}),S.jsx(pl,{children:S.jsx(ro,{leftSlot:{content:"About",to:Pe.ABOUT},rightSlot:{content:"Skills",to:Pe.SKILL}})})]})}function XA(e){const[t,n]=H.useState(),{image_url:r,org:l,roles:a,timeline:s,location:c,description:d}=e==null?void 0:e.data;return H.useEffect(()=>{r&&(async()=>{const p=new URL(r,window.location.href).href;n(p)})()},[r]),S.jsx(S.Fragment,{children:S.jsxs(YA,{children:[S.jsx("div",{children:S.jsx("ul",{className:"dot-list ",children:S.jsxs("li",{className:"list-item flex-row inline-flex",title:s,children:[S.jsx(KO,{role:"presentation"})," ",s]})})}),S.jsx("p",{className:"work__org mb-1",children:l}),S.jsx("ul",{className:"flex dot-list meta gap-[4px] flex-wrap items-center",children:a==null?void 0:a.map((p,y)=>S.jsx("li",{className:"text-sm list-item",title:p,children:S.jsx("small",{children:p})},y))}),S.jsx("p",{className:"description text-normal text-xs my-2",children:d}),t?S.jsx(F_,{children:S.jsx("picture",{children:S.jsx("img",{alt:`${l} logo`,src:t})})}):null]})})}const B_=z.createContext({mode:"system",onChange(){},onToggle(){}});function qA(e){const[t,n]=z.useState({mode:"system"}),r=s=>{document.body.setAttribute("data-theme",s),n(c=>({...c,mode:s}))};function l(s){if(!s){const d=localStorage.getItem("theme")==="light"?"dark":"light";localStorage.setItem("theme",d),r(d);return}r(s)}function a(){let s=localStorage.getItem("theme")||t.mode;s=s==="light"?"dark":"light",localStorage.setItem("theme",s),r(s)}return z.useEffect(()=>{const s=localStorage.getItem("theme");if(s)r(s);else if(window&&window.matchMedia("(prefers-color-scheme)").media!=="not all"){const c=window.matchMedia("(prefers-color-scheme: dark)");let d=c.matches,p=d?"dark":"light";t||(r(p),localStorage.setItem("theme",p)),c.addEventListener("change",y=>{d=y.matches,p=d?"dark":"light",r(p),localStorage.setItem("theme",p)})}},[]),S.jsx(B_.Provider,{value:{mode:t.mode,onChange:l,onToggle:a},children:e==null?void 0:e.children})}function ZA(){return z.useContext(B_)}const JA=Re.button(()=>`
 margin-top: 20px;
 margin-bottom: 20px;
 padding: 8px;
